@@ -432,7 +432,10 @@ public class Flappybird extends JPanel implements ActionListener, KeyListener{
     }
     public boolean collision(Bird a,Pipe b){
         if(delay2>0) return false;
-        return  false;
+          return  a.x+90<b.x  + b.width 
+               && a.x+a.width>b.x+90
+              && a.y<b.y+b.height
+             && a.y+a.height>b.y;
 
 
     }
